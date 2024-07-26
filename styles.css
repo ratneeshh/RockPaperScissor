@@ -1,0 +1,158 @@
+/* styles.css */
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.badge {
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 5px;
+    background: #333;
+}
+
+#score {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.result {
+    margin-bottom: 20px;
+}
+
+.result p {
+    font-size: 1.5rem;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.choice {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 3rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.choice:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.reset-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background: #ff6b6b;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.reset-btn:hover {
+    background: #ff4b4b;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .badge {
+        font-size: 1.2rem;
+    }
+    
+    #score {
+        font-size: 1.5rem;
+    }
+    
+    .result p {
+        font-size: 1.2rem;
+    }
+    
+    .choice {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .badge {
+        font-size: 1rem;
+    }
+    
+    #score {
+        font-size: 1.2rem;
+    }
+    
+    .result p {
+        font-size: 1rem;
+    }
+    
+    .choice {
+        font-size: 2rem;
+    }
+    
+    .choices {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+.win {
+    animation: winAnim 0.5s ease;
+}
+
+.lose {
+    animation: loseAnim 0.5s ease;
+}
+
+@keyframes winAnim {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+@keyframes loseAnim {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.5); }
+    100% { transform: scale(1); }
+}
