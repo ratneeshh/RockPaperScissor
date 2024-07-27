@@ -1,1 +1,1 @@
-[PLAY HERE](ratnesh-rps.vercel.app)
+[PLAY HERE](https://ratnesh-rps.vercel.app/)
